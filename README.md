@@ -35,6 +35,7 @@ O programa é desenvolvido em Python. Existem duas formas de configurar o ambien
 2. **Usando Docker (recomendado)**:
     - Acesse [aqui](https://www.docker.com/products/docker-desktop/) para baixar o Docker e siga as instruções de instalação.
     - Abra o Docker e o mantenha rodando.
+    - Utilize [GitBash](https://git-scm.com/downloads) para executar os comandos.
 
 #### Configuração Adicional
 
@@ -257,7 +258,7 @@ The program is developed in Python. There are two ways to configure the environm
 2. **Using Docker (recommended)**:
     - Go to [here](https://www.docker.com/products/docker-desktop/) to download Docker and follow the installation instructions.
     - Open Docker and keep it running.
-
+    - Use [GitBash](https://git-scm.com/downloads) to run the commands.
 
 #### Additional Configuration
 
