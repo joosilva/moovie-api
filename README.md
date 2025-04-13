@@ -122,8 +122,7 @@ Antes de realizar qualquer requisição, autentique o seu usuário na rota de lo
 #### Credenciais:
 - Existe um usuário fictício para testes:
     ```bash
-    id usuário: 1
-*(Não é seguro expor o id assim, porém, por se tratar de uma aplicação fictícia, esse dado pode ser exigido em algumas requisições.)*
+    id usuário: 1 (Não é seguro expor o id assim, porém, por se tratar de uma aplicação fictícia, esse dado pode ser exigido em algumas requisições.)*
     username: moovies-api
     senha: python@MooviesApi159
     ```
@@ -133,14 +132,14 @@ Antes de realizar qualquer requisição, autentique o seu usuário na rota de lo
 - Método: ```POST```
 - Rota: ```/usuario```
 - Body:
-    echo '```json
+    ```json
     {
         "nome": "string",
         "username": "string",
         "email": "string",
         "senha": "string"
     }
-    ```'
+    ```
 
 #### Autenticando um Usuário:
 - Método: ```POST```
@@ -148,12 +147,12 @@ Antes de realizar qualquer requisição, autentique o seu usuário na rota de lo
 - Parâmetro (opcional): ```"duracao_token": int``` (Duração do token em minutos)
 *(Por se tratar de uma aplicação fictícia, este parâmetro foi adicionado para que você testar e explorar o tempo de expiração do token.)*
 - Body:
-    echo '```json
+    ```json
     {
         "username": "string",
         "senha": "string"
     }
-    ```'
+    ```
 
 ### Testes
 Você pode visualizar os testes da unidade de testes e executá-los.
@@ -348,8 +347,7 @@ Before making any requests, authenticate your user on the login route to generat
 #### Credentials:
 - There is a dummy user for testing:
     ```bash
-    user id: 1
-*(It is not secure to expose the id like this, but since this is a mock application, this data might be required in some requests.)*
+    user id: 1 (It is not secure to expose the id like this, but since this is a mock application, this data might be required in some requests.)*
     username: moovies-api
     password: python@MooviesApi159
     ```
@@ -359,14 +357,14 @@ Before making any requests, authenticate your user on the login route to generat
 - Method: ```POST```
 - Route: ```/usuario```
 - Body:
-    echo '```json
+    ```json
     {
         "name": "string",
         "username": "string",
         "email": "string",
         "password": "string"
     }
-    ```'
+    ```
 
 #### Authenticating a User:
 - Method: ```POST```
@@ -374,12 +372,12 @@ Before making any requests, authenticate your user on the login route to generat
 - Parameter (optional): ```"duracao_token": int``` (Token duration in minutes)
 *(Since this is a mock application, this parameter was added for you to test and explore the token expiration time.)*
 - Body:
-    echo '```json
+    ```json
     {
         "username": "string",
         "password": "string"
     }
-    ```'
+    ```
 
 ### Tests
 You can view and execute the unit tests.
