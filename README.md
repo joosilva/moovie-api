@@ -13,11 +13,11 @@
 
 Este projeto é a implementação de uma API para uma plataforma de streaming.
 O objetivo desta API é permitir que o usuário faça requisições para avaliar filmes e séries e receber indicações de títulos para assistir com base em seus históricos de visualização e preferências.
-Esteprojeto utiliza uma arquitetura em camadas e foi desenvolvido seguindo os princípios de **Clean Architecture, SOLID e Clean Code**, garantindo uma estrutura modular, flexível e escalável..
+Este projeto utiliza uma arquitetura em camadas e foi desenvolvido seguindo os princípios de **Clean Architecture, SOLID e Clean Code**, garantindo uma estrutura modular, flexível e escalável..
 
 ### Regras
 
-- A API permite criar, modifificar e excluir usuários, além de logar e deslogar um usuário;
+- A API permite criar, modificar e excluir usuários, além de logar e deslogar um usuário;
 - Com o usuário criado e logado, um token de acesso é gerado e deve ser usado para realizar as demais requisições;
 - A API pode indicar filmes e séries ao usuário realizando uma filtragem colaborativa, recomendando títulos que outros usuários tenham gostado e baseada em conteúdo, analisando parâmetros como avaliações do usuário, gênero, diretores, elenco e recomendando títulos semelhantes. 
 
