@@ -20,6 +20,8 @@ class Usuario(Base):
     
     tokens = relationship("Token", back_populates = "usuario")
     
+    avaliacoes = relationship("Avaliacao", back_populates = "usuario")
+    
     def to_dto(self):
         from src.domain.dto.usuario_dto import UsuarioDTO
         

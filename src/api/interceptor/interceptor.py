@@ -5,7 +5,7 @@ from src.domain.service.token_service import TokenService
 
 ROTAS_PUBLICAS = [
     ("POST", "/login"),
-    ("POST", "/usuarios"),
+    ("POST", "/usuario"),
     ("GET", "/docs"),
     ("GET", "/openapi.json")
 ]

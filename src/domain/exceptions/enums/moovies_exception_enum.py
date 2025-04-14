@@ -9,6 +9,8 @@ class MooviesExceptionEnum(Enum):
     
     SENHA_DIVERGENTE_EXCEPTION = (422, "Senha Divergente", "Senha atual diverge da nova senha fornecida.")
     
+    TITULO_NAO_ENCONTRADO_EXCEPTION = (422, "Titulo não Encontrado", "Este título não está mais disponível.")
+    
     TOKEN_EXPIRADO_EXCEPTION = (401, "Token Expirado", "Limite de tempo de expiração do token excedido.")
     TOKEN_INVALIDO_EXCEPTION = (401, "Token Inválido", "Token não é válido.")
     TOKEN_VAZIO_EXCEPTION = (400, "Token Vazio", "Valor de token não fornecido.")

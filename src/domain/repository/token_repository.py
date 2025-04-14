@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from src.domain.model.token import Token
-from src.domain.repository.base_repository import BaseRepository
+from src.domain.repository.base.base_repository import BaseRepository
 
 class TokenRepository(BaseRepository):
     

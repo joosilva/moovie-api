@@ -4,7 +4,7 @@ from src.domain.dto.login_dto import LoginDTO
 from src.domain.dto.token_dto import TokenDTO
 from src.domain.exceptions.exceptions import LoginInvalidoException, LoginVazioException
 from src.domain.model.usuario import Usuario
-from src.domain.service.base_service import BaseService
+from src.domain.service.base.base_service import BaseService
 from src.domain.service.token_service import TokenService
 from src.domain.service.usuario_service import UsuarioService
 

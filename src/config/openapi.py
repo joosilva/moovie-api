@@ -8,8 +8,7 @@ app = FastAPI(
     title="Moovies API",
     version="1.0",
     description="API para retorno de filmes e séries.",
-    swagger_ui_init_oauth={},
-    openapi_tags=[{"name": "usuarios", "description": "Operações com usuários"}]
+    swagger_ui_init_oauth={}
 )
 
 def custom_openapi(app: FastAPI):

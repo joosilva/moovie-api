@@ -8,7 +8,7 @@ from src.domain.dto.login_dto import LoginDTO
 from src.domain.service.auth_service import AuthService
 from src.domain.service.dependencies.service_factory import get_auth_service
 
-router = APIRouter()
+router = APIRouter(tags = ["Autenticação"])
 
 @router.post("/login", status_code = 201, responses = {
     400: {"model": MooviesExceptionResponse, "description": "Login Vazio"},

@@ -2,9 +2,13 @@ from datetime import datetime
 from sqlalchemy import or_
 
 from src.domain.model.usuario import Usuario
-from src.domain.repository.base_repository import BaseRepository
+from src.domain.repository.base.base_repository import BaseRepository
 
 class UsuarioRepository(BaseRepository):
+    
+    def count_usuarios(self) -> int:
+        return self.db.query(Usuario).count()
+    
     
     def verifica_usuario_ja_existente(self, username: str, email: str) -> bool:
         usuario = self.db.query(Usuario).filter(

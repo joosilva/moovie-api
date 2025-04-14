@@ -10,7 +10,7 @@ from src.domain.dto.usuario_dto import UsuarioDTO
 from src.domain.dto.usuario_new_dto import UsuarioNewDTO
 from src.domain.dto.usuario_update_dto import UsuarioUpdateDTO
 from src.domain.exceptions.exceptions import SenhaDivergenteException, UsuarioExistenteException, UsuarioInvalidoException
-from src.domain.service.base_service import BaseService
+from src.domain.service.base.base_service import BaseService
 from src.domain.service.token_service import TokenService
 from src.domain.repository.usuario_repository import UsuarioRepository
 
@@ -22,16 +22,10 @@ class UsuarioService(BaseService):
         self.db = db
         self.token_service = TokenService(db)
         self.usuario_repository = UsuarioRepository(db)
-    
-    def recupera_id_usuario_by_token(self, token_code: str):
-        return self.token_service.recupera_id_usuario_by_token(token_code)
-    
-    
-    def verifica_usuario_ja_existente(self, usuario: Union[UsuarioDTO, UsuarioUpdateDTO]):
-        is_usuario_existente = self.usuario_repository.verifica_usuario_ja_existente(usuario.username, usuario.email)
         
-        if is_usuario_existente:
-            raise UsuarioExistenteException()
+        
+    def count_usuarios(self) -> int:
+        return self.usuario_repository.count_usuarios()
     
         
     def cria_novo_usuario(self, usuario: UsuarioNewDTO) -> UsuarioDTO:
@@ -42,6 +36,16 @@ class UsuarioService(BaseService):
         new_usuario = self.usuario_repository.cria_novo_usuario(usuario.to_model())
         
         return new_usuario.to_dto()
+    
+    def recupera_id_usuario_by_token(self, token_code: str) -> int:
+        return self.token_service.recupera_id_usuario_by_token(token_code)
+    
+    
+    def verifica_usuario_ja_existente(self, usuario: Union[UsuarioDTO, UsuarioUpdateDTO]):
+        is_usuario_existente = self.usuario_repository.verifica_usuario_ja_existente(usuario.username, usuario.email)
+        
+        if is_usuario_existente:
+            raise UsuarioExistenteException()
     
     
     def busca_usuario_by_username(self, username: str):

@@ -12,7 +12,7 @@ from src.domain.exceptions.exceptions import TokenExpiradoException, TokenInvali
 from src.domain.model.token import Token
 from src.domain.model.usuario import Usuario
 from src.domain.repository.token_repository import TokenRepository
-from src.domain.service.base_service import BaseService
+from src.domain.service.base.base_service import BaseService
 
 db = DatabaseConfig()
 
@@ -74,5 +74,10 @@ class TokenService(BaseService):
     
     def recupera_id_usuario_by_token(self, token_code: str) -> int: 
         token_code = self.trata_token_code(token_code)
+        
+        id_usuario = self.token_repository.recupera_id_usuario_by_token(token_code)
                
-        return self.token_repository.recupera_id_usuario_by_token(token_code)
+        if not id_usuario:
+            raise TokenInvalidoException()
+               
+        return id_usuario

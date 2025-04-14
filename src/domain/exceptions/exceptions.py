@@ -1,6 +1,7 @@
 from src.api.exceptions.moovies_exception import MooviesException
 from src.domain.exceptions.enums.moovies_exception_enum import MooviesExceptionEnum
 
+
 class LoginInvalidoException(MooviesException):
     
     def __init__(self):
@@ -17,6 +18,12 @@ class SenhaDivergenteException(MooviesException):
     
     def __init__(self):
         super().__init__(MooviesExceptionEnum.SENHA_DIVERGENTE_EXCEPTION)
+
+
+class TituloNaoEncontradoException(MooviesException):
+    
+    def __init__(self):
+        super().__init__(MooviesExceptionEnum.TITULO_NAO_ENCONTRADO_EXCEPTION)
 
 
 class TokenExpiradoException(MooviesException):

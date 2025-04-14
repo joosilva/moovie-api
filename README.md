@@ -54,11 +54,6 @@ docker build -t $(IMAGE_NAME) .
 docker run -d -p 8080:8080 $(IMAGE_NAME)
 ```
 
-###### rodar testes:
-```bash
-docker run --rm $(IMAGE_NAME) pytest
-```
-
 *Escolha o nome que quiser para as variáveis de imagem docker e substitua "$(IMAGE_NAME)".*
 
 ***
@@ -153,21 +148,6 @@ Antes de realizar qualquer requisição, autentique o seu usuário na rota de lo
         "username": "string",
         "senha": "string"
     }
-    ```
-
-### Testes
-Você pode visualizar os testes da unidade de testes e executá-los.
-
-#### Sem Docker:
-- No terminal, execute o comando:
-    ```bash
-    pytest --disable-warnings
-    ```
-
-#### Usando Docker (recomendado):
-- Execute o comando:
-    ```bash
-    make test
     ```
 
 ### Parando a Aplicação
@@ -278,11 +258,6 @@ docker build -t $(IMAGE_NAME) .
 docker run -d -p 8080:8080 $(IMAGE_NAME)
 ```
 
-###### run tests:
-```bash
-docker run --rm $(IMAGE_NAME) pytest
-```
-
 *You can choose whatever name you want for your docker image variables replacing "$(IMAGE_NAME)."*
 
 ***
@@ -378,21 +353,6 @@ Before making any requests, authenticate your user on the login route to generat
         "username": "string",
         "password": "string"
     }
-    ```
-
-### Tests
-You can view and execute the unit tests.
-
-#### Without Docker:
-- In the terminal, run the command:
-    ```bash
-    pytest --disable-warnings
-    ```
-
-#### Using Docker (recommended):
-- Run the command:
-    ```bash
-    make test
     ```
 
 ### Stopping the Application
